@@ -1,0 +1,35 @@
+{
+  "name": "4th Try Tech color tokens",
+  "version": "0.1.0",
+  "status": "Palette D1 locked 2026-09-20; typography pending",
+  "roles": {
+    "ground": "Page background",
+    "body": "Primary brand color; rocket body, headings, links",
+    "fin": "Accent; fins, calls to action",
+    "finShade": "Accent shade; right fin, hover states",
+    "flame": "Secondary accent; flame, stripes, highlights",
+    "sun": "Warm neutral; sun disc, hull bands, soft fills",
+    "success": "Success only; the 4th circle, confirmations. Never decorative",
+    "ink": "Text and hairline icons"
+  },
+  "light": {
+    "ground": "#F0E9DC",
+    "body": "#46607A",
+    "fin": "#C44E33",
+    "finShade": "#A23C26",
+    "flame": "#E07A5F",
+    "sun": "#F2CC8F",
+    "success": "#4E8A6D",
+    "ink": "#3D405B"
+  },
+  "dark": {
+    "ground": "#1F2430",
+    "body": "#7E9CBC",
+    "fin": "#E0694C",
+    "finShade": "#C44E33",
+    "flame": "#F08A6C",
+    "sun": "#E8C07D",
+    "success": "#7FC29F",
+    "ink": "#E6E1D6"
+  }
+}

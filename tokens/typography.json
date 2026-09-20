@@ -1,0 +1,31 @@
+{
+  "name": "4th Try Tech typography tokens",
+  "version": "0.1.0",
+  "status": "Display and text faces locked 2026-09-20 (Round E option E5, Round F option F2). Canva availability not yet confirmed.",
+  "display": {
+    "family": "Fredoka",
+    "weight": 600,
+    "fallback": "'Trebuchet MS', 'Segoe UI', sans-serif",
+    "use": "Wordmark, headlines, buttons, the 4th badge",
+    "wordmarkTracking": "0.04em",
+    "license": "SIL Open Font License"
+  },
+  "text": {
+    "family": "Nunito Sans",
+    "weights": [
+      400,
+      600
+    ],
+    "fallback": "system-ui, 'Segoe UI', sans-serif",
+    "use": "Paragraphs, lists, captions and interface text",
+    "license": "SIL Open Font License"
+  },
+  "code": {
+    "family": "JetBrains Mono",
+    "weight": 400,
+    "fallback": "ui-monospace, Menlo, Consolas, monospace",
+    "use": "Code and console snippets",
+    "license": "SIL Open Font License"
+  },
+  "hosting": "Self-host font files from the brand repo; do not load from Google at view time."
+}

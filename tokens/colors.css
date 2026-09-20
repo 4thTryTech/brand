@@ -1,0 +1,33 @@
+/* 4th Try Tech color tokens v0.1.0 (palette D1, locked 2026-09-20) */
+:root {
+  --ftt-ground: #F0E9DC;
+  --ftt-body: #46607A;
+  --ftt-fin: #C44E33;
+  --ftt-fin-shade: #A23C26;
+  --ftt-flame: #E07A5F;
+  --ftt-sun: #F2CC8F;
+  --ftt-success: #4E8A6D;
+  --ftt-ink: #3D405B;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ftt-ground: #1F2430;
+    --ftt-body: #7E9CBC;
+    --ftt-fin: #E0694C;
+    --ftt-fin-shade: #C44E33;
+    --ftt-flame: #F08A6C;
+    --ftt-sun: #E8C07D;
+    --ftt-success: #7FC29F;
+    --ftt-ink: #E6E1D6;
+  }
+}
+:root[data-theme="dark"] {
+  --ftt-ground: #1F2430;
+  --ftt-body: #7E9CBC;
+  --ftt-fin: #E0694C;
+  --ftt-fin-shade: #C44E33;
+  --ftt-flame: #F08A6C;
+  --ftt-sun: #E8C07D;
+  --ftt-success: #7FC29F;
+  --ftt-ink: #E6E1D6;
+}
