@@ -11,6 +11,9 @@ Reusable pieces of the logo, each a standalone SVG drawn from the same shapes an
 | `stripe-band-light.svg`, `stripe-band-dark.svg` | The three-stripe band as a rule or divider. Stretches sideways to any width |
 | `hairline-star.svg`, `hairline-planet.svg` | Scene icons. They draw in `currentColor`; use them at about 45% opacity |
 
-The icon mark is the roundel itself, in `logo/`. The wordmark and tagline lockup are not here yet: they wait on font files in `fonts/` so the lettering can be outlined.
+| `wordmark-*.svg` | "4th Try Tech" in Fredoka 600: headers, footers, documents. Light, dark, mono-ink, mono-reversed |
+| `tagline-lockup-*.svg` | Wordmark with the tagline beneath: hero sections, slides. Same four versions |
 
-Regenerate with `scripts/build_elements.py`.
+The icon mark is the roundel itself, in `logo/`. The lettering in the wordmark and lockup is outlined, so no font is needed.
+
+Regenerate with `scripts/build_elements.py` and `scripts/build_wordmark.py`.

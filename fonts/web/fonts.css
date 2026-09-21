@@ -1,0 +1,6 @@
+/* 4th Try Tech web fonts, self-hosted. Latin subset. All three families are under the SIL Open Font License (see ../<family>/OFL.txt).
+   Copy this folder to the site and link this file; the family names match tokens/typography.json. */
+@font-face { font-family: "Fredoka"; font-weight: 600; font-style: normal; font-display: swap; src: url("fredoka-600.woff2") format("woff2"); }
+@font-face { font-family: "Nunito Sans"; font-weight: 400; font-style: normal; font-display: swap; src: url("nunito-sans-400.woff2") format("woff2"); }
+@font-face { font-family: "Nunito Sans"; font-weight: 600; font-style: normal; font-display: swap; src: url("nunito-sans-600.woff2") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-weight: 400; font-style: normal; font-display: swap; src: url("jetbrains-mono-400.woff2") format("woff2"); }

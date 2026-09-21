@@ -1,6 +1,6 @@
 # 4th Try Tech brand guidelines
 
-Version 0.2, 20 September 2026. Decisions made by Michael Lehman; drawn and documented with Claude.
+Version 0.3, 20 September 2026. Decisions made by Michael Lehman; drawn and documented with Claude.
 
 4th Try Tech is a working log of technology projects, experiments, and misadventures.
 
@@ -19,7 +19,7 @@ The logo is the **roundel**: a rounded rocket with a 4 on its hull, launching in
 
 The 4 is drawn as a shape, so the logo needs no font. Every part is a named group (`ring`, `disc`, `stripes`, `rocket`, `flame`, `fins`, `body`, `bands`, `badge`, `numeral`) so it can be animated part by part.
 
-**Splash and hero artwork** is a separate piece: `splash/splash-light.svg` and `splash/splash-dark.svg` (1170 x 2532, 9:19.5 portrait). It is the roundel's scene opened to full screen with no ring, plus the wordmark and tagline. Use it for splash screens and hero sections; use the roundel in headers, icons and anywhere a logo is expected. The splash files set their text in Fredoka and Nunito Sans through a web import, so they need a browser; outline the text once font files are added to this repo.
+**Splash and hero artwork** is a separate piece: `splash/splash-light.svg` and `splash/splash-dark.svg` (1170 x 2532, 9:19.5 portrait). It is the roundel's scene opened to full screen with no ring, plus the wordmark and tagline. Use it for splash screens and hero sections; use the roundel in headers, icons and anywhere a logo is expected. The wordmark and tagline in the splash files are outlined shapes, so the files need no font and look the same in any viewer.
 
 ## Using the logo
 
@@ -70,7 +70,7 @@ The favicon and app-icon set is in `icons/`, with the HTML to paste in `icons/RE
 
 PNG copies of the logo for tools that cannot take SVG are in `exports/`.
 
-The wordmark and tagline lockup are not drawn yet. They wait on the font files, so the lettering can be outlined.
+The **wordmark** (`elements/wordmark-*.svg`) is "4th Try Tech" in Fredoka 600 with slight letter spacing (2 units per 124 of type size). The **tagline lockup** (`elements/tagline-lockup-*.svg`) adds the tagline beneath in Nunito Sans 400 at 37% of the wordmark's size. Both come in light, dark, one-color ink and reversed versions, and the lettering is outlined, so no font is needed. Minimum width: wordmark 96 px, tagline lockup 240 px (below that the tagline drops under 12 px type).
 
 ## Style rules
 
@@ -111,7 +111,7 @@ Source of truth: `tokens/typography.json`. All three families are under the SIL 
 | Text | Nunito Sans | 400, 600 | Paragraphs, lists, captions, interface |
 | Code | JetBrains Mono | 400 | Code and console snippets |
 
-Self-host the font files from this repo. Do not load them from Google at view time: some viewers and privacy filters block it, and the brand then falls back to system fonts.
+Self-host the fonts: copy `fonts/web/` to the site and link its `fonts.css`. It holds Latin-subset WOFF2 files of exactly the four faces above, about 63 KB in all. Do not load fonts from Google at view time: some viewers and privacy filters block it, and the brand then falls back to system fonts. The complete downloaded families, with their licenses, are in `fonts/Fredoka`, `fonts/Nunito_Sans` and `fonts/JetBrains_Mono`.
 
 ## Voice
 
@@ -132,6 +132,7 @@ Three explored styles were liked and set aside to return as theme variants of th
 | `tokens/` | Color and typography design tokens |
 | `logo/` | Roundel logo, all versions |
 | `splash/` | Full-screen splash and hero artwork |
+| `fonts/` | The three font families as downloaded (with OFL licenses) and `fonts/web/`, the subset WOFF2 files and `fonts.css` for sites |
 | `elements/` | Standalone reusable pieces of the logo |
 | `guidelines/` | Diagrams used on this page |
 | `icons/` | Favicon and app-icon set, web manifest |

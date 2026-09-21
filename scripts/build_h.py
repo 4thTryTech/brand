@@ -24,7 +24,14 @@ def icons(P, pts):
             o.append(f'<circle cx="{x}" cy="{y}" r="{s}" {ln}/><path d="M{x - s * 1.5} {y + s * .3} C{x - s * .4} {y + s} {x + s} {y + s * .3} {x + s * 1.6} {y - s * .6}" {ln}/>')
     return "".join(o)
 
+OUTLINE = [False]   # True while writing the standalone splash files: lettering becomes shapes, no font needed
+
 def words(P, y, size=124):
+    if OUTLINE[0]:
+        from textpath import text_path
+        d1, _ = text_path("4th Try Tech", "fredoka-600", size, W / 2, y, "middle", tracking=2)
+        d2, _ = text_path("When the 3rd try wasn\u2019t enough, keep going.", "nunito-400", 46, W / 2, y + 96, "middle")
+        return f'<g id="wordmark"><path d="{d1}" fill="{P["body"]}"/></g><g id="tagline"><path d="{d2}" fill="{P["ink"]}"/></g>'
     return (f'<text x="{W / 2}" y="{y}" text-anchor="middle" font-family="{FRED}" font-weight="600" font-size="{size}" letter-spacing="2" fill="{P["body"]}">4th Try Tech</text>'
             f'<text x="{W / 2}" y="{y + 96}" text-anchor="middle" font-family="{NUN}" font-weight="400" font-size="46" fill="{P["ink"]}">{TAG}</text>')
 
@@ -63,11 +70,15 @@ def h2(P, uid, show_guides=True):
     return "".join(o)
 
 def phone(fn, P, uid, show_guides=True, standalone=False):
-    extra = ""
-    if standalone:
-        extra = ("<style>@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600&amp;family=Nunito+Sans:wght@400&amp;display=swap');</style>")
+    """standalone=True writes a finished file: needs fonttools and ../fonts/, and the text is outlined."""
     size = f' width="{W}" height="{H}"' if standalone else ""
-    return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}"{size} role="img" aria-label="4th Try Tech phone screen">{extra}{fn(P, uid, show_guides)}</svg>'
+    OUTLINE[0] = standalone
+    try:
+        body = fn(P, uid, show_guides)
+    finally:
+        OUTLINE[0] = False
+    label = "4th Try Tech. When the 3rd try wasn&#8217;t enough, keep going."
+    return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}"{size} role="img" aria-label="{label}">{body}</svg>'
 
 OPTIONS = [
     dict(tag="H1", name="Centered roundel", fn=h1, line="The finished roundel in the middle of a calm screen, wordmark and tagline beneath it. The logo exactly as it appears everywhere else."),

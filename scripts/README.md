@@ -1,6 +1,6 @@
 # Generator scripts
 
-Plain Python 3, no dependencies (except `export_icons.py`). Each script writes into `scripts/out/` (ignored by git). Run them from this folder; later scripts import earlier ones, so keep the file names.
+Plain Python 3, no dependencies, except where the table says otherwise. Each script writes into `scripts/out/` (ignored by git). Run them from this folder; later scripts import earlier ones, so keep the file names.
 
 | Script | Produces |
 | --- | --- |
@@ -12,8 +12,11 @@ Plain Python 3, no dependencies (except `export_icons.py`). Each script writes i
 | `build_f.py` | Round F: text face beside Fredoka; Nunito Sans was chosen |
 | `build_g.py` | Round G: four logo compositions; G1 roundel was chosen |
 | `build_logo.py` | The finished roundel logo files in `logo/` |
-| `build_h.py` | Round H: phone-screen layouts and the splash files in `splash/` (H2) |
+| `build_h.py` | Round H: phone-screen layouts and the splash files in `splash/` (H2). The splash files have outlined lettering, so this one also needs `fonttools` |
 | `build_elements.py` | The standalone pieces in `elements/` and the icon masters in `icons/` |
+| `textpath.py` | Helper: turns a line of text into outlined SVG path data with the font's kerning. Needs `fonttools` and the families in `fonts/` |
+| `build_wordmark.py` | The wordmark and tagline lockup in `elements/`. Needs `fonttools` |
+| `build_webfonts.py` | The WOFF2 subsets in `fonts/web/`. Needs `fonttools` and `brotli` |
 | `build_guides.py` | The diagrams in `guidelines/`: clear space, minimum sizes, backgrounds, misuse |
 | `export_icons.py` | PNG and ICO files in `icons/` and `exports/`. The one script with dependencies: needs `playwright` (with Chromium) and `pillow`. Run `build_logo.py` and `build_elements.py` first |
 
