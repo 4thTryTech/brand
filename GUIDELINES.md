@@ -1,6 +1,6 @@
 # 4th Try Tech brand guidelines
 
-Version 0.4, 20 September 2026. Decisions made by Michael Lehman; drawn and documented with Claude.
+Version 0.5, 20 September 2026. Decisions made by Michael Lehman; drawn and documented with Claude.
 
 4th Try Tech is a working log of technology projects, experiments, and misadventures.
 
@@ -65,6 +65,17 @@ The full-color logo goes on the ground color, white, or the dark ground (dark ve
 Do not stretch, tilt, recolor, add shadows or other effects, remove the ring or any part, or set the full-color logo on a colored background. Do not rebuild the logo from the elements or set the 4 in a font: use the files as they are. The splash art is not a logo and does not replace the roundel.
 
 ![Misuse](guidelines/misuse.svg)
+
+## Animation
+
+The animated logo tells the name: three tries that do not take, then a fourth that does. A dot hops along four numbered nodes, leaving a trail that fades. Nodes 1 to 3 flash coral, get a retry arrow and dim. Node 4 turns green and becomes the badge on the hull while the sun grows, the stripes wipe in, the rocket rises and the ring draws. It runs about 5.3 seconds and ends on exactly the static artwork.
+
+- Files are in `animation/`: the roundel, the phone splash and the tablet and desktop heroes, light and dark, plus MP4 and GIF copies in `animation/video/`. How to place them on a page is in `animation/README.md`.
+- There is a **compact version** of the roundel (`animation/logo-animated-compact-*.svg`) for tight spaces. Nothing leaves the roundel: the rocket lifts and drops back three times while the badge counts 1, 2, 3 in coral, then shows a green 4 and lifts off. Use the full version at about 240 px and up, the compact one below that or wherever the nodes would not have room.
+- It plays once when loaded and may replay when someone clicks or taps it. It never loops.
+- Use it once per visit, on a splash or the home page hero. Everywhere else use the static logo.
+- People who ask their device for reduced motion see the finished still frame. This is built into the files; do not override it.
+- Coral means a try that did not take and green means success, the same as everywhere else in the brand.
 
 ## Elements and icons
 
@@ -144,6 +155,7 @@ Three explored styles were liked and set aside to return as theme variants of th
 | `splash/` | Full-screen phone splash artwork |
 | `hero/` | Tablet and desktop hero artwork |
 | `fonts/` | The three font families as downloaded (with OFL licenses) and `fonts/web/`, the subset WOFF2 files and `fonts.css` for sites |
+| `animation/` | Animated logo, splash and heroes (SVG + CSS), with MP4 and GIF copies |
 | `elements/` | Standalone reusable pieces of the logo |
 | `guidelines/` | Diagrams used on this page |
 | `icons/` | Favicon and app-icon set, web manifest |

@@ -7,6 +7,7 @@ This repo holds the core brand assets for 4th Try Tech, shared across projects. 
 - Regenerate logo or splash files by editing and running `scripts/build_logo.py` or `scripts/build_h.py`, then copy the results from `scripts/out/` into `logo/` or `splash/`.
 - Reusable pieces are in `elements/`, the favicon and app-icon set in `icons/`, PNG copies in `exports/`. Regenerate with `scripts/build_elements.py` then `scripts/export_icons.py` and copy from `scripts/out/`.
 - When running git here from a Claude session, use `git --no-optional-locks` for read commands: the session cannot delete files, so a plain `git status` can leave a stale `.git/index.lock` behind.
+- The animated logo is in `animation/` (storyboard option C, fading trail). In those files CSS transforms sit on groups with no `transform` attribute, because a CSS transform replaces the attribute; keep it that way when editing `scripts/build_animation.py`.
 - Copy follows `voice/brand-voice.md`: candid, practical, wry; the journey is the subject.
 - Fonts are self-hosted: sites use `fonts/web/` (WOFF2 subsets plus `fonts.css`). Brand lettering in SVGs is always outlined with `scripts/textpath.py`, never live text, so files need no font. Those scripts need `fonttools` (and `brotli` for `build_webfonts.py`).
 - The website lives in the separate `4thTryTech/website` repo and should consume these assets.

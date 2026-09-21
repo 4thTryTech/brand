@@ -18,6 +18,9 @@ Plain Python 3, no dependencies, except where the table says otherwise. Each scr
 | `build_wordmark.py` | The wordmark and tagline lockup in `elements/`. Needs `fonttools` |
 | `build_webfonts.py` | The WOFF2 subsets in `fonts/web/`. Needs `fonttools` and `brotli` |
 | `build_lockups.py` | Phase 4: the lockups in `logo/` and the tablet and desktop artwork in `hero/`. Needs `fonttools` |
+| `build_storyboard.py` | Phase 5.1: the five animation sketches that were compared; option C was chosen |
+| `build_animation.py` | Phase 5: the animated files in `animation/`. Needs `fonttools` |
+| `export_animation.py` | MP4 and GIF copies in `animation/video/`. Needs `playwright` (with Chromium) and `ffmpeg` |
 | `build_guides.py` | The diagrams in `guidelines/`: clear space, minimum sizes, backgrounds, misuse |
 | `export_icons.py` | PNG and ICO files in `icons/` and `exports/`. The one script with dependencies: needs `playwright` (with Chromium) and `pillow`. Run `build_logo.py` and `build_elements.py` first |
 
