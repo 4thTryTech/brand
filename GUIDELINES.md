@@ -1,6 +1,6 @@
 # 4th Try Tech brand guidelines
 
-Version 0.3, 20 September 2026. Decisions made by Michael Lehman; drawn and documented with Claude.
+Version 0.4, 20 September 2026. Decisions made by Michael Lehman; drawn and documented with Claude.
 
 4th Try Tech is a working log of technology projects, experiments, and misadventures.
 
@@ -17,9 +17,19 @@ The logo is the **roundel**: a rounded rocket with a 4 on its hull, launching in
 | `logo/logo-roundel-mono-reversed.svg` | One color, white, transparent background, for dark surfaces |
 | `logo/logo-roundel-mono-reversed-preview.svg` | Viewing only. Has a dark square built in; do not place in designs |
 
+**Lockups** pair the roundel with the wordmark. Use them wherever the name needs to be read, and the roundel alone where space is tight or the name is already nearby.
+
+| File | Use |
+| --- | --- |
+| `logo/lockup-horizontal-*.svg` | Roundel left, wordmark right, about 5:1. Site header, email signature, document headers. Minimum height 64 px (80 px for one-color) |
+| `logo/lockup-horizontal-small-light.svg` | Same, with the small roundel, for bars 32 to 63 px high |
+| `logo/lockup-stacked-*.svg` | Roundel above the wordmark and tagline. Title slides, covers, about pages |
+
+Each comes in light, dark, mono-ink and mono-reversed. The gap between roundel and wordmark is the clear-space unit, one eighth of the roundel. Clear space around a lockup uses the same unit.
+
 The 4 is drawn as a shape, so the logo needs no font. Every part is a named group (`ring`, `disc`, `stripes`, `rocket`, `flame`, `fins`, `body`, `bands`, `badge`, `numeral`) so it can be animated part by part.
 
-**Splash and hero artwork** is a separate piece: `splash/splash-light.svg` and `splash/splash-dark.svg` (1170 x 2532, 9:19.5 portrait). It is the roundel's scene opened to full screen with no ring, plus the wordmark and tagline. Use it for splash screens and hero sections; use the roundel in headers, icons and anywhere a logo is expected. The wordmark and tagline in the splash files are outlined shapes, so the files need no font and look the same in any viewer.
+**Splash and hero artwork** is a separate piece: `splash/splash-light.svg` and `splash/splash-dark.svg` (1170 x 2532, 9:19.5 portrait). It is the roundel's scene opened to full screen with no ring, plus the wordmark and tagline. Use it for splash screens on phones; use the roundel or a lockup in headers, icons and anywhere a logo is expected. The same scene turned sideways is in `hero/`: `hero-tablet-*.svg` (2048 x 1536, 4:3) and `hero-desktop-*.svg` (2560 x 1440, 16:9), with the words on the left and the sun and rocket on the right. Parts are in named groups (`sun`, `stripes`, `icons`, `rocket`, `wordmark`, `tagline`) for animation. The wordmark and tagline in the splash files are outlined shapes, so the files need no font and look the same in any viewer.
 
 ## Using the logo
 
@@ -130,8 +140,9 @@ Three explored styles were liked and set aside to return as theme variants of th
 | Path | Contents |
 | --- | --- |
 | `tokens/` | Color and typography design tokens |
-| `logo/` | Roundel logo, all versions |
-| `splash/` | Full-screen splash and hero artwork |
+| `logo/` | Roundel logo and the roundel-plus-wordmark lockups, all versions |
+| `splash/` | Full-screen phone splash artwork |
+| `hero/` | Tablet and desktop hero artwork |
 | `fonts/` | The three font families as downloaded (with OFL licenses) and `fonts/web/`, the subset WOFF2 files and `fonts.css` for sites |
 | `elements/` | Standalone reusable pieces of the logo |
 | `guidelines/` | Diagrams used on this page |
