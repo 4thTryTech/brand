@@ -21,7 +21,23 @@ The 4 is drawn as a shape, so the logo needs no font. Every part is a named grou
 
 **Splash and hero artwork** is a separate piece: `splash/splash-light.svg` and `splash/splash-dark.svg` (1170 x 2532, 9:19.5 portrait). It is the roundel's scene opened to full screen with no ring, plus the wordmark and tagline. Use it for splash screens and hero sections; use the roundel in headers, icons and anywhere a logo is expected. The splash files set their text in Fredoka and Nunito Sans through a web import, so they need a browser; outline the text once font files are added to this repo.
 
-Still to define: clear space, minimum sizes, and misuse examples (plan phase 3).
+Still to define: clear space, minimum sizes, and misuse examples (plan step 3.3).
+
+## Elements and icons
+
+Reusable pieces live in `elements/` (rocket, numeral badge, sun and stripes, stripe band, hairline icons), each in light, dark and one-color versions where that applies. Build new artwork from these rather than redrawing. Details: `elements/README.md`.
+
+The favicon and app-icon set is in `icons/`, with the HTML to paste in `icons/README.md`. Three drawings cover every size:
+
+| Size | Drawing |
+| --- | --- |
+| 16 and 24 px | `icons/icon-micro.svg`: sun disc, a wider rocket, a porthole. No ring, stripes or numeral |
+| 32 and 48 px | `logo/logo-roundel-small.svg` |
+| 180 px and up, square | `icons/app-icon-*.svg`: full-bleed sun and stripes, no ring, rocket inside the central 80% so any mask shape is safe. Also the social avatar (`exports/avatar-*.png`) |
+
+PNG copies of the logo for tools that cannot take SVG are in `exports/`.
+
+The wordmark and tagline lockup are not drawn yet. They wait on the font files, so the lettering can be outlined.
 
 ## Style rules
 
@@ -83,6 +99,9 @@ Three explored styles were liked and set aside to return as theme variants of th
 | `tokens/` | Color and typography design tokens |
 | `logo/` | Roundel logo, all versions |
 | `splash/` | Full-screen splash and hero artwork |
+| `elements/` | Standalone reusable pieces of the logo |
+| `icons/` | Favicon and app-icon set, web manifest |
+| `exports/` | PNG copies of the logo and the avatar |
 | `voice/` | Brand voice |
 | `reference/` | Original concept (v0) and the chosen art-direction reference images |
 | `scripts/` | Python generators for every review page and for the logo and splash files. See `scripts/README.md` |

@@ -1,6 +1,6 @@
 # Generator scripts
 
-Plain Python 3, no dependencies. Each script writes into `scripts/out/` (ignored by git). Run them from this folder; later scripts import earlier ones, so keep the file names.
+Plain Python 3, no dependencies (except `export_icons.py`). Each script writes into `scripts/out/` (ignored by git). Run them from this folder; later scripts import earlier ones, so keep the file names.
 
 | Script | Produces |
 | --- | --- |
@@ -13,5 +13,7 @@ Plain Python 3, no dependencies. Each script writes into `scripts/out/` (ignored
 | `build_g.py` | Round G: four logo compositions; G1 roundel was chosen |
 | `build_logo.py` | The finished roundel logo files in `logo/` |
 | `build_h.py` | Round H: phone-screen layouts and the splash files in `splash/` (H2) |
+| `build_elements.py` | The standalone pieces in `elements/` and the icon masters in `icons/` |
+| `export_icons.py` | PNG and ICO files in `icons/` and `exports/`. The one script with dependencies: needs `playwright` (with Chromium) and `pillow`. Run `build_logo.py` and `build_elements.py` first |
 
 The review pages load fonts from Google Fonts, so open them in a regular browser.
