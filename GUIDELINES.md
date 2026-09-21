@@ -1,6 +1,6 @@
 # 4th Try Tech brand guidelines
 
-Version 0.1, 20 September 2026. Decisions made by Michael Lehman; drawn and documented with Claude.
+Version 0.2, 20 September 2026. Decisions made by Michael Lehman; drawn and documented with Claude.
 
 4th Try Tech is a working log of technology projects, experiments, and misadventures.
 
@@ -21,7 +21,40 @@ The 4 is drawn as a shape, so the logo needs no font. Every part is a named grou
 
 **Splash and hero artwork** is a separate piece: `splash/splash-light.svg` and `splash/splash-dark.svg` (1170 x 2532, 9:19.5 portrait). It is the roundel's scene opened to full screen with no ring, plus the wordmark and tagline. Use it for splash screens and hero sections; use the roundel in headers, icons and anywhere a logo is expected. The splash files set their text in Fredoka and Nunito Sans through a web import, so they need a browser; outline the text once font files are added to this repo.
 
-Still to define: clear space, minimum sizes, and misuse examples (plan step 3.3).
+## Using the logo
+
+### Clear space
+
+Keep a margin of **x = one eighth of the logo's diameter** clear on every side: no text, images or edges inside it. A 160 px logo gets 20 px. Favicons, app icons and avatars are exempt, because the platform supplies their frame.
+
+![Clear space](guidelines/clear-space.svg)
+
+### Minimum sizes
+
+Pick the drawing by the size it will appear at. Below each minimum the 4 stops being readable, so switch to the next drawing down rather than shrinking.
+
+| Version | Screen | Print |
+| --- | --- | --- |
+| Roundel, full color (`logo-roundel-light`, `-dark`) | 64 px and up | 20 mm and up |
+| Roundel, one color (`-mono-ink`, `-mono-reversed`) | 80 px and up | 25 mm and up |
+| Small roundel (`logo-roundel-small`) | 32 to 63 px | 10 to 19 mm |
+| Micro icon (`icons/icon-micro.svg`) | 16 to 31 px | Not for print |
+
+Pixel sizes are CSS pixels. Elements: the rocket with its badge needs 56 px of height; smaller than that, use it only as decoration. The 4 badge works down to 16 px.
+
+![Minimum sizes](guidelines/minimum-sizes.svg)
+
+### Backgrounds
+
+The full-color logo goes on the ground color, white, or the dark ground (dark version). On any other color, or on a photo, use a one-color version with at least 3:1 contrast against what is behind it: reversed on slate, coral or dark surfaces; ink on sun or other light surfaces.
+
+![Backgrounds](guidelines/backgrounds.svg)
+
+### Misuse
+
+Do not stretch, tilt, recolor, add shadows or other effects, remove the ring or any part, or set the full-color logo on a colored background. Do not rebuild the logo from the elements or set the 4 in a font: use the files as they are. The splash art is not a logo and does not replace the roundel.
+
+![Misuse](guidelines/misuse.svg)
 
 ## Elements and icons
 
@@ -100,6 +133,7 @@ Three explored styles were liked and set aside to return as theme variants of th
 | `logo/` | Roundel logo, all versions |
 | `splash/` | Full-screen splash and hero artwork |
 | `elements/` | Standalone reusable pieces of the logo |
+| `guidelines/` | Diagrams used on this page |
 | `icons/` | Favicon and app-icon set, web manifest |
 | `exports/` | PNG copies of the logo and the avatar |
 | `voice/` | Brand voice |
